@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<block>
+  <name>asci_sink</name>
+  <key>spectroscopy_asci_sink</key>
+  <category>spectroscopy</category>
+  <import>import spectroscopy</import>
+  <make>spectroscopy.asci_sink($vlen, $filename)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Filename</name>
+    <key>filename</key>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Vector Length</name>
+    <key>vlen</key>
+    <type>int</type>
+  </param>
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>float</type>
+    <vlen>$vlen</vlen>
+  </sink>
+
+</block>

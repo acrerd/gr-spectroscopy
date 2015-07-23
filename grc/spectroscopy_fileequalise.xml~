@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<block>
+  <name>Equaliser (file)</name>
+  <key>spectroscopy_file_equalise</key>
+  <category>spectroscopy</category>
+  <import>import spectroscopy</import>
+  <make>spectroscopy.fileequalise($vlen, $flatfield)</make>
+
+  <param>
+    <name>Flatfield file</name>
+    <key>flatfield</key>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>Vector length</name>
+    <key>vlen</key>
+    <type>int</type>
+  </param>
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>float</type>
+<vlen>$vlen</vlen>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+    <vlen>$vlen</vlen>
+  </source>
+</block>
