@@ -1,3 +1,0 @@
-/home/astro/repositories/gnuradio_modules/gr-spectroscopy/build/apps/CMakeFiles/pygen_apps_9a6dd.dir
-/home/astro/repositories/gnuradio_modules/gr-spectroscopy/build/python/CMakeFiles/pygen_python_086ea.dir
-/home/astro/repositories/gnuradio_modules/gr-spectroscopy/build/CMakeFiles/uninstall.dir
